@@ -11,13 +11,9 @@ Une application PHP avec base de données SQLite pour gérer les entrées et sor
 - **Rapports** : Génération de rapports détaillés (quotidien, par employé, par département)
 - **Interface responsive** : Consultable sur ordinateur, tablette et mobile
 
-## Captures d'écran
-
-(Captures d'écran à ajouter)
-
 ## Prérequis
 
-- PHP 7.4 ou supérieur
+- PHP 8.2 ou supérieur
 - Extension PDO SQLite activée
 - Serveur web (Apache, Nginx, etc.)
 
@@ -25,15 +21,10 @@ Une application PHP avec base de données SQLite pour gérer les entrées et sor
 
 1. Clonez ce dépôt sur votre serveur web :
    \`\`\`
-   git clone https://github.com/votre-utilisateur/pointage_app.git
+   git clone https://github.com/NewEldesy/pointage_app.git
    \`\`\`
 
-2. Assurez-vous que le dossier `database` est accessible en écriture par le serveur web :
-   \`\`\`
-   chmod 755 database
-   \`\`\`
-
-3. Accédez à l'application via votre navigateur :
+2. Accédez à l'application via votre navigateur :
    \`\`\`
    http://localhost/pointage_app
    \`\`\`
@@ -44,7 +35,7 @@ Une application PHP avec base de données SQLite pour gérer les entrées et sor
 
 ## Structure du projet
 
-\`\`\`
+```
 pointage_app/
 ├── assets/
 │   ├── css/
@@ -70,7 +61,7 @@ pointage_app/
 ├── employee-view.php
 ├── reports.php
 └── README.md
-\`\`\`
+```
 
 ## Personnalisation
 
