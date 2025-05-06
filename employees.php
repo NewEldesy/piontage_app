@@ -15,20 +15,10 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     
     // Vérifier si l'employé existe
     $stmt = $pdo->prepare("SELECT id FROM employees WHERE id = ?");
-    $stmt->bindParam(1, $employeeId, PDO::PARAM_INT);
-    $stmt->execute();
+    $stmt->execute([$employeeId]);
+    $employee = $stmt->fetch();
 
-    // echo "<pre>";
-    // print_r($_GET);
-    // $stmtCheck = $pdo->prepare("SELECT * FROM employees");
-    // $stmtCheck->execute();
-    // $all = $stmtCheck->fetchAll();
-    // print_r($all);
-    // echo "</pre>";
-    // exit;
-    
-    var_dump($stmt->rowCount()); exit;
-    if ($stmt->rowCount() > 0) {
+    if ($employee) {
         // Supprimer les pointages associés
         $stmt = $pdo->prepare("DELETE FROM attendance WHERE employee_id = ?");
         $stmt->execute([$employeeId]);
